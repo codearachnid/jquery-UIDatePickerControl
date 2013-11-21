@@ -64,6 +64,9 @@
   line-height: 30px;
   padding: 0 5px;
 }
+.UIDatePickerControl .control .item.active {
+  font-weight: bold;
+}
 .UIDatePickerControl .control .selected {
   position: absolute;
   top: 58px;
