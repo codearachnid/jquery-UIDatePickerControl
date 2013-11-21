@@ -18,10 +18,7 @@
             itemHeight: '50px',
             visibleRange: 5,
             fullRange: 90,
-            css: {
-                active: {'font-weight':'bold'},
-                inactive: {'font-weight':'normal'}
-            }
+            selectedClass: 'active'
         };
 
     // plugin constructor
@@ -97,7 +94,7 @@
                 originalPosition = itemsElement.offset();
                 availableHeight = itemsElement.outerHeight();
                 selected = $(e.target).parents('.control').find('.selected');
-                itemsElement.children().css( self.settings.css.inactive );
+                itemsElement.children().removeClass( self.settings.selectedClass );
 
                 // To allow the slide to keep step with the finger,
                 // temporarily disable transitions.
@@ -126,7 +123,7 @@
                 // remove css transition blocks
                 $(this).removeClass('notransition');
 
-                itemsElement.children().css( self.settings.css.inactive );
+                itemsElement.children().removeClass( self.settings.selectedClass );
 
                 touching = selected.touching();
                 intendedElement = $(touching[ touching.length + nearestElement ]);
@@ -137,7 +134,7 @@
                 }, {
                     complete: function(){
                         // get changed value
-                        changedValue = intendedElement.css( self.settings.css.active ).attr('data-value');
+                        changedValue = intendedElement.addClass( self.settings.selectedClass ).attr('data-value');
                         control = itemsElement.parent();
 
                         // look at the parent control to determine which date param to update
@@ -319,7 +316,7 @@
                 this._selected.setHours( this._selected.getHours() + 1 );
             }
             control.minute.find('.items').offset({
-                top: control.minute.find('.selected').offset().top - control.minute.find('.item[data-value=' + minutesInDay + ']').css( this.settings.css.active ).position().top
+                top: control.minute.find('.selected').offset().top - control.minute.find('.item[data-value=' + minutesInDay + ']').addClass( this.settings.selectedClass ).position().top
             });
 
             // set hours
@@ -332,13 +329,13 @@
                 meridiemInDay = 'AM';
             }
             control.hour.find('.items').offset({
-                top: control.hour.find('.selected').offset().top - control.hour.find('.item[data-value=' + hoursInDay + ']').css( this.settings.css.active ).position().top
+                top: control.hour.find('.selected').offset().top - control.hour.find('.item[data-value=' + hoursInDay + ']').addClass( this.settings.selectedClass ).position().top
             });
 
             // set meridiem
             control.meridiem = $(this.element).find('.control[data-type=meridiem]');
             control.meridiem.find('.items').offset({
-                top: control.meridiem.find('.selected').offset().top - control.meridiem.find('.item[data-value=' + meridiemInDay + ']').css( this.settings.css.active ).position().top
+                top: control.meridiem.find('.selected').offset().top - control.meridiem.find('.item[data-value=' + meridiemInDay + ']').addClass( this.settings.selectedClass ).position().top
             });
 
             // set date
@@ -348,13 +345,12 @@
                 this.padNumber( this._selected.getMonth()+1, 2 )  + "-" + 
                 this.padNumber( this._selected.getDate(), 2 );
             control.date.find('.items').offset({
-                top: control.date.find('.selected').offset().top - control.date.find('.item[data-value=' + currentDate + ']').css( this.settings.css.active ).position().top
+                top: control.date.find('.selected').offset().top - control.date.find('.item[data-value=' + currentDate + ']').addClass( this.settings.selectedClass ).position().top
             });
 
         },
         getDateTime: function(){
             dateTime = $(this.element).find('.datetime').val();
-            // if date/time is blank use current date/time
             if (dateTime == false || typeof dateTime == 'undefined')
                 return false;
             pattern = /(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})/;
