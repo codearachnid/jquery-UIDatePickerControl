@@ -36,6 +36,33 @@
 
 <p>A simple iOS-esc jQuery plugin to create a UIPickerControl. Currently implemented as a calendar picker with intentions to abstract.</p>
 
+<link rel="stylesheet" type="text/css" href="https://rawgithub.com/codearachnid/jquery-UIDatePickerControl/master/jquery.UIDatePickerControl.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="https://rawgithub.com/stephband/jquery.event.move/master/js/jquery.event.move.js"></script>
+<script type="text/javascript" src="https://rawgithub.com/stephband/jquery.event.swipe/master/js/jquery.event.swipe.js"></script>
+<script type="text/javascript" src="https://rawgithub.com/phstc/jquery-dateFormat/master/jquery.dateFormat-1.0.js"></script>
+<script type="text/javascript" src="https://rawgithub.com/gilmoreorless/jquery-nearest/master/jquery.nearest.min.js"></script>
+<script type="text/javascript" src="https://rawgithub.com/codearachnid/jquery-UIDatePickerControl/master/jquery.UIDatePickerControl.js"></script>
+<div class="UIDatePickerControl">
+	<input type="hidden" class="datetime" date-format="yyyy-MM-dd HH:mm:ss" value="2010-08-09 16:30:00" />
+	<!-- date -->
+	<div class="control" data-type="date"></div>
+	<!-- hour -->
+	<div class="control" data-type="hour" data-mode="12" data-select="5"></div>
+	<!-- minute (15 minute increments) -->
+	<div class="control" data-type="minute" data-increment="15"></div>	
+	<!-- meridiem -->
+	<div class="control" data-type="meridiem"></div>
+</div>
+<div class="box"></div>
+<script type="text/javascript">
+	jQuery(document).ready(function($){
+		$('.UIDatePickerControl').UIDatePickerControl({
+              debug: true
+          });
+	});
+</script>
+
 <h3>
 <a name="requires" class="anchor" href="#requires"><span class="octicon octicon-link"></span></a>Requires</h3>
 
