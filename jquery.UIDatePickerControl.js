@@ -18,7 +18,8 @@
             itemHeight: '50px',
             visibleRange: 5,
             fullRange: 90,
-            selectedClass: 'active'
+            selectedClass: 'active',
+            complete: false
         };
 
     // plugin constructor
@@ -46,6 +47,7 @@
             self.controlSetup();
             self.setDateTime();
             self.swipeHandler();
+            self.complete();
             
             $(self.element).find('.datetime').on('change',function(){
                 self.update();
@@ -66,10 +68,17 @@
             self.dateControl();
             self.setDateTime();
             self.swipeHandler();
+            self.complete();
 
             // stop debug timer
             if( this._debug )
                 console.timeEnd(this._name + "-update");
+        },
+        complete: function() {
+            // now call a callback function
+            if(typeof this.settings.complete == 'function'){
+                this.settings.complete.call( this );
+            }
         },
         swipeHandler: function(){
             var nearestElement = 0, selected, itemsElement, availableHeight, originalPosition = {
