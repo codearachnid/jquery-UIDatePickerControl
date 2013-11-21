@@ -51,10 +51,7 @@
             self.swipeHandler();
             
             $(self.element).find('.datetime').on('change',function(){
-                self.getDateTime();
-                self.dateControl();
-                self.setDateTime();
-                self.swipeHandler();
+                self.update();
             });
 
             // stop debug timer
@@ -68,6 +65,10 @@
                 console.log(this._name + ".update()");
             }
 
+            self.getDateTime();
+            self.dateControl();
+            self.setDateTime();
+            self.swipeHandler();
 
             // stop debug timer
             if( this._debug )
