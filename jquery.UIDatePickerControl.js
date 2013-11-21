@@ -1,5 +1,5 @@
 /**
- * jQuery UIPickerControl v0.9
+ * jQuery UIDatePickerControl v0.9
  *
  * A simple plugin to organize events in a daily view and positioned 
  * in relationship to each other.
@@ -12,7 +12,7 @@
 
 ;(function ( $, window, document, undefined ) {
 
-    var pluginName = "UIPickerControl",
+    var pluginName = "UIDatePickerControl",
         defaults = {
             debug: false,
             itemHeight: '50px',
