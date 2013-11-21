@@ -1,0 +1,84 @@
+.UIDatePickerControl {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  position: relative;
+  padding: 10px;
+  margin: 20px;
+  border: 2px solid #333;
+  width: auto;
+  display: inline-block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: #979dab;
+  background: -moz-linear-gradient(top, #979dab 0%, #60687d 25%, #454754 50%, #282a37 51%, #222431 76%, #282a39 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #979dab), color-stop(25%, #60687d), color-stop(50%, #454754), color-stop(51%, #282a37), color-stop(76%, #222431), color-stop(100%, #282a39));
+  background: -webkit-linear-gradient(top, #979dab 0%, #60687d 25%, #454754 50%, #282a37 51%, #222431 76%, #282a39 100%);
+  background: -o-linear-gradient(top, #979dab 0%, #60687d 25%, #454754 50%, #282a37 51%, #222431 76%, #282a39 100%);
+  background: -ms-linear-gradient(top, #979dab 0%, #60687d 25%, #454754 50%, #282a37 51%, #222431 76%, #282a39 100%);
+  background: linear-gradient(to bottom, #979dab 0%, #60687d 25%, #454754 50%, #282a37 51%, #222431 76%, #282a39 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#979dab', endColorstr='#282a39', GradientType=0);
+}
+.UIDatePickerControl .notransition {
+  -webkit-transition-duration: 0 !important;
+  -moz-transition-duration: 0 !important;
+  -ms-transition-duration: 0 !important;
+  transition-duration: 0 !important;
+  -webkit-transition-delay: 0 !important;
+  -moz-transition-delay: 0 !important;
+  -ms-transition-delay: 0 !important;
+  transition-delay: 0 !important;
+}
+.UIDatePickerControl .control {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  border: 1px solid #333;
+  border-left: 2px solid #333;
+  border-right: 2px solid #333;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  height: 150px;
+  position: relative;
+  min-width: 50px;
+  text-align: center;
+  background: #b8e1fc;
+  background: -moz-linear-gradient(top, #b8e1fc 0%, #ffffff 25%, #ffffff 75%, #b8e1fc 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b8e1fc), color-stop(25%, #ffffff), color-stop(75%, #ffffff), color-stop(100%, #b8e1fc));
+  background: -webkit-linear-gradient(top, #b8e1fc 0%, #ffffff 25%, #ffffff 75%, #b8e1fc 100%);
+  background: -o-linear-gradient(top, #b8e1fc 0%, #ffffff 25%, #ffffff 75%, #b8e1fc 100%);
+  background: -ms-linear-gradient(top, #b8e1fc 0%, #ffffff 25%, #ffffff 75%, #b8e1fc 100%);
+  background: linear-gradient(to bottom, #b8e1fc 0%, #ffffff 25%, #ffffff 75%, #b8e1fc 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#b8e1fc', endColorstr='#b8e1fc', GradientType=0);
+}
+.UIDatePickerControl .control[data-type=date] {
+  text-align: right;
+}
+.UIDatePickerControl .control .item {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+}
+.UIDatePickerControl .control .selected {
+  position: absolute;
+  top: 58px;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  opacity: .5;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  background: #b8e1fc;
+  background: -moz-linear-gradient(top, #b8e1fc 0%, #a9d2f3 10%, #90bae4 25%, #90bcea 37%, #90bff0 50%, #6ba8e5 51%, #a2daf5 83%, #bdf3fd 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b8e1fc), color-stop(10%, #a9d2f3), color-stop(25%, #90bae4), color-stop(37%, #90bcea), color-stop(50%, #90bff0), color-stop(51%, #6ba8e5), color-stop(83%, #a2daf5), color-stop(100%, #bdf3fd));
+  background: -webkit-linear-gradient(top, #b8e1fc 0%, #a9d2f3 10%, #90bae4 25%, #90bcea 37%, #90bff0 50%, #6ba8e5 51%, #a2daf5 83%, #bdf3fd 100%);
+  background: -o-linear-gradient(top, #b8e1fc 0%, #a9d2f3 10%, #90bae4 25%, #90bcea 37%, #90bff0 50%, #6ba8e5 51%, #a2daf5 83%, #bdf3fd 100%);
+  background: -ms-linear-gradient(top, #b8e1fc 0%, #a9d2f3 10%, #90bae4 25%, #90bcea 37%, #90bff0 50%, #6ba8e5 51%, #a2daf5 83%, #bdf3fd 100%);
+  background: linear-gradient(to bottom, #b8e1fc 0%, #a9d2f3 10%, #90bae4 25%, #90bcea 37%, #90bff0 50%, #6ba8e5 51%, #a2daf5 83%, #bdf3fd 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#b8e1fc', endColorstr='#bdf3fd', GradientType=0);
+}
