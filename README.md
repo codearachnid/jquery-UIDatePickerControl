@@ -3,6 +3,8 @@ jQuery.UIDatePickerControl
 
 A simple iOS-esc jQuery plugin to create a UIPickerControl. Currently implemented as a calendar picker with intentions to abstract.
 
+##[Live Demo](http://codearachnid.github.io/jquery-UIDatePickerControl/)
+
 ###Requires
 
 * jQuery (tested 1.8.3)
