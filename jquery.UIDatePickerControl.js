@@ -354,6 +354,9 @@
         },
         getDateTime: function(){
             dateTime = $(this.element).find('.datetime').val();
+            // if date/time is blank use current date/time
+            if (dateTime == false || typeof dateTime == 'undefined')
+                return false;
             pattern = /(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})/;
             dateArray = pattern.exec(dateTime); 
             this._selected = new Date(
