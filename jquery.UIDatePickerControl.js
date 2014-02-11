@@ -134,7 +134,10 @@
 
                 itemsElement.children().removeClass( self.settings.selectedClass );
 
-                touching = selected.touching();
+                touching = selected.touching().map(function( index, domElement ){
+                    if( $(domElement).hasClass('item') )
+                        return domElement;
+                });
                 intendedElement = $(touching[ touching.length + nearestElement ]);
 
                 // snap item with selected bar
